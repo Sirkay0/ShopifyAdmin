@@ -270,19 +270,23 @@ input.searchbar::placeholder {
     border-radius: 4px;
 }
 
-.step_1_open {
+.step_1_btn {
     padding: 0.25rem;
     border-radius: 0.375rem;
     border: none;
     background: #FFF;
 }
 
-.step_1_open:hover {
+.step_1_btn:hover {
     background: #F1F1F1;
 }
 
-.step_1_open:focus {
+.step_1_btn:focus {
     border: 2px solid #005BD3;
+}
+
+#down {
+    display: none;
 }
 
 .task_container {
@@ -295,11 +299,10 @@ input.searchbar::placeholder {
     display: flex;
     padding: 0.5rem 0.5rem 0.75rem 0.5rem;
     align-items: center;
-    gap: 6rem;
-    justify-content: space-between;
+    gap: 0.5rem; 
     align-self: stretch;
     border-radius: 0.625rem;
-    background: #F3F3F3;
+    background: #FFF; /*#F3F3F3 */
 }
 
 .task_box {
@@ -320,19 +323,48 @@ input.searchbar::placeholder {
     padding: 0.125rem 0rem;
     flex-direction: column;
     align-items: flex-start;
-    gap: 1rem;
+    justify-content: flex-start;
     flex: 1 0 0;
 }
 
 .task_details h1 {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    align-self: stretch;
+}
+
+.task_details h1 button {
     color: #303030;
     font-family: 'Inter', sans-serif;
     font-size: 0.8125rem;
     font-weight: 600;
     line-height: 140%;
+    border: none;
+    background: transparent;
+    width: 100%;
+    text-align: left;
 }
 
-.task_details p {
+.task_details_body{
+    display: none;
+    /* display: flex; */
+    justify-content: space-between;
+    gap: 6rem;
+    align-items: center;
+    align-self: stretch;
+}
+
+.task_details_body div:first-child {
+     display: flex;
+     flex-direction: column;
+     gap: 1rem;
+     justify-content: flex-start;
+     align-items: flex-start;
+}
+
+.task_details_body div:first-child p {
     color: #616161;
     font-family: 'Inter', sans-serif;
     font-size: 0.8125rem;
@@ -340,10 +372,12 @@ input.searchbar::placeholder {
     line-height: 140%;
 }
 
-.task_details p a {
+.task_details_body div:first-child p a{
     text-decoration: none;
     color: #005BD3
 }
+
+
 
 .task_btn {
     display: flex;
@@ -402,6 +436,13 @@ input.searchbar::placeholder {
     background: #FFF;
 }
 
+.task.active {
+    background-color: #F3F3F3; /* Choose your desired background color */
+}
+
+.task_details_body.open {
+    display: flex; /* Show task details when the 'open' class is present */
+}
 
 .menu{
     display: flex;
@@ -510,7 +551,7 @@ input.searchbar::placeholder {
 }
 
 hr {
-    width: 20rem;
+    width: 100%;
     height: 0.04688rem;
     background: #E1E1E1;
 }
@@ -609,7 +650,7 @@ hr {
 } 
 
 .alert_container {
-    display: inline-flex;
+    display: flex;
     padding: 1rem;
     flex-direction: column;
     align-items: flex-start;
@@ -713,6 +754,10 @@ hr {
 
     .close_plan.desktop_close {
         display: none;
+    }
+
+    .task_details {
+        gap: 1rem;
     }
 
     .task_details p {

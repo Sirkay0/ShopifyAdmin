@@ -141,101 +141,121 @@
                               </svg>
                         </div>
                     </div>
-                    <button class="step_1_open"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M5.71967 8.46967C6.01256 8.17678 6.48744 8.17678 6.78033 8.46967L10.25 11.9393L13.7197 8.46967C14.0126 8.17678 14.4874 8.17678 14.7803 8.46967C15.0732 8.76256 15.0732 9.23744 14.7803 9.53033L10.7803 13.5303C10.4874 13.8232 10.0126 13.8232 9.71967 13.5303L5.71967 9.53033C5.42678 9.23744 5.42678 8.76256 5.71967 8.46967Z" fill="#4A4A4A"/>
-                          </svg>
-                    </button>
+                    <div>
+                        <button class="step_1_btn" id="down"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M5.71967 8.46967C6.01256 8.17678 6.48744 8.17678 6.78033 8.46967L10.25 11.9393L13.7197 8.46967C14.0126 8.17678 14.4874 8.17678 14.7803 8.46967C15.0732 8.76256 15.0732 9.23744 14.7803 9.53033L10.7803 13.5303C10.4874 13.8232 10.0126 13.8232 9.71967 13.5303L5.71967 9.53033C5.42678 9.23744 5.42678 8.76256 5.71967 8.46967Z" fill="#4A4A4A"/>
+                                </svg>
+                        </button>
+                        <button class="step_1_btn" id="up"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M14.5303 12.2803C14.2374 12.5732 13.7626 12.5732 13.4697 12.2803L10 8.81066L6.53033 12.2803C6.23744 12.5732 5.76256 12.5732 5.46967 12.2803C5.17678 11.9874 5.17678 11.5126 5.46967 11.2197L9.46967 7.21967C9.76256 6.92678 10.2374 6.92678 10.5303 7.21967L14.5303 11.2197C14.8232 11.5126 14.8232 11.9874 14.5303 12.2803Z" fill="#4A4A4A"/>
+                                </svg>
+                        </button>
+                    </div>
                 </div>
-                <div class="task_container">
-                    <div class="task">
-                        <div class="task_box">
-                                <div class="tick">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                        <circle cx="12" cy="12" r="10" stroke="#8A8A8A" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="5 5"/>
-                                    </svg>
-                                </div>
-                                <div class="task_details">
-                                    <h1>Customize your online store</h1>
+                <div class="task_container" id="task_div">
+                    <div class="task active">
+                        <div class="tick">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <circle cx="12" cy="12" r="10" stroke="#8A8A8A" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="5 5"/>
+                            </svg>
+                        </div>
+                        <div class="task_details">
+                            <h1><button class="task_box_btn">Customize your online store</button></h1>
+                            <div class="task_details_body open">
+                                <div>
                                     <p>Choose a theme and add your logo, colors, and images to reflect your brand. <a href="https://www.figma.com/exit?url=https%3A%2F%2Fhelp.shopify.com%2Fmanual%2Fonline-store%2Fthemes%2Fcustomizing-themes">Learn more</a></p>
                                     <button class="task_btn">Customize theme</button>
                                 </div>
-                            </div>
-                            <div class="task_img">
-                                <img src="https://crushingit.tech/hackathon-assets/customise-store.png" alt="customize Image">
-                            </div>
-                    </div>
-                    <div class="task">
-                        <div class="task_box">
-                                <div class="tick">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                        <circle cx="12" cy="12" r="10" stroke="#8A8A8A" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="5 5"/>
-                                    </svg>
+                                <div class="task_img">
+                                    <img src="https://crushingit.tech/hackathon-assets/customise-store.png" alt="customize Image">
                                 </div>
-                                <div class="task_details">
-                                    <h1>Add your first product</h1>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="task">
+                        <div class="tick">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <circle cx="12" cy="12" r="10" stroke="#8A8A8A" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="5 5"/>
+                            </svg>
+                        </div>
+                        <div class="task_details">
+                            <h1><button class="task_box_btn">Add your first product</button></h1>
+                            <div class="task_details_body">
+                                <div>
                                     <p>Write a description, add photos, and set pricing for the products you plan to sell. <a href="https://www.figma.com/exit?url=https%3A%2F%2Fhelp.shopify.com%2Fmanual%2Fonline-store%2Fthemes%2Fcustomizing-themes">Learn more</a></p>
                                     <div class="task_btn_box">
                                         <button class="task_btn">Add product</button>
                                         <button class="task_btn2">Import product</button>
                                     </div>
                                 </div>
+                                <div class="task_img">
+                                    <img src="https://crushingit.tech/hackathon-assets/product.png" alt="Product Image">
+                                </div>
                             </div>
-                            <div class="task_img">
-                                <img src="https://crushingit.tech/hackathon-assets/product.png" alt="Product Image">
-                            </div>
+                        </div>
                     </div>
 
                     <div class="task">
-                        <div class="task_box">
-                                <div class="tick">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                        <circle cx="12" cy="12" r="10" stroke="#8A8A8A" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="5 5"/>
-                                    </svg>
-                                </div>
-                                <div class="task_details">
-                                    <h1>Add your custom domian</h1>
+                        <div class="tick">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <circle cx="12" cy="12" r="10" stroke="#8A8A8A" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="5 5"/>
+                            </svg>
+                        </div>
+                        <div class="task_details">
+                            <h1><button class="task_box_btn">Add your custom domian</button></h1>
+                            <div class="task_details_body">
+                                <div>
                                     <p>Your current domain is 222219.myshopify.com but you can add a custom domain to help customers find your online store. <a href="https://www.figma.com/exit?url=https%3A%2F%2Fhelp.shopify.com%2Fmanual%2Fonline-store%2Fthemes%2Fcustomizing-themes">Learn more</a></p>
                                     <button class="task_btn">Add Domain</button>
                                 </div>
-                            </div>
-                            <div class="task_img">
-                                <img src="https://crushingit.tech/hackathon-assets/website.png" alt="Domain Image">
-                            </div>
-                    </div>
-                    <div class="task">
-                        <div class="task_box">
-                                <div class="tick">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                        <circle cx="12" cy="12" r="10" stroke="#8A8A8A" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="5 5"/>
-                                    </svg>
+                                <div class="task_img">
+                                    <img src="https://crushingit.tech/hackathon-assets/website.png" alt="Domain Image">
                                 </div>
-                                <div class="task_details">
-                                    <h1>Name your store</h1>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="task">
+                        <div class="tick">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <circle cx="12" cy="12" r="10" stroke="#8A8A8A" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="5 5"/>
+                            </svg>
+                        </div>
+                        <div class="task_details">
+                            <h1><button class="task_box_btn">Name your store</button></h1>
+                            <div class="task_details_body">
+                                <div>
                                     <p>Your temporary store name is currently Davii collections. The store name appears in your admin and your online store. <a href="https://www.figma.com/exit?url=https%3A%2F%2Fhelp.shopify.com%2Fmanual%2Fonline-store%2Fthemes%2Fcustomizing-themes">Learn more</a></p>
                                     <button class="task_btn">Name store</button>
                                 </div>
-                            </div>
-                            <div class="task_img">
-                                <img src="https://crushingit.tech/hackathon-assets/name-store.png" alt="website Image">
-                            </div>
-                    </div>
-                    <div class="task">
-                        <div class="task_box">
-                                <div class="tick">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                        <circle cx="12" cy="12" r="10" stroke="#8A8A8A" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="5 5"/>
-                                    </svg>
+                                <div class="task_img">
+                                    <img src="https://crushingit.tech/hackathon-assets/name-store.png" alt="website Image">
                                 </div>
-                                <div class="task_details">
-                                    <h1>Set up a payment provider</h1>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="task">
+                        <div class="tick">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <circle cx="12" cy="12" r="10" stroke="#8A8A8A" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="5 5"/>
+                            </svg>
+                        </div>
+                        <div class="task_details">
+                            <h1><button class="task_box_btn">Set up a payment provider</button></h1>
+                            <div class="task_details_body">
+                                <div>
                                     <p>Choose a payment provider to start accepting payments. You&#39;ll need to create an account with the payment provider and set it up with your Shopify store. <a href="https://www.figma.com/exit?url=https%3A%2F%2Fhelp.shopify.com%2Fmanual%2Fonline-store%2Fthemes%2Fcustomizing-themes">Learn more</a></p>
                                     <button class="task_btn">Set up payment</button>
                                 </div>
+                                 <div class="task_img">
+                                    <img src="https://crushingit.tech/hackathon-assets/payment.png" alt="payment Image">
+                                </div>
                             </div>
-                            <div class="task_img">
-                                <img src="https://crushingit.tech/hackathon-assets/payment.png" alt="payment Image">
-                            </div>
+                        </div>
                     </div>
+
                 </div>    
             </section>
         </article>

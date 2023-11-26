@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+a{
+    text-decoration: none;
+}
+
 body {
     font-family: 'Inter', sans-serif;
     background: #F1F1F1;
@@ -266,7 +270,20 @@ input.searchbar::placeholder {
     line-height: 130%;
 }
 
-.step_progress svg {
+.progress_bar {
+    width: 4.5rem;
+    height: 0.28rem;
+    background: #E3E3E3;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 4px;
+}
+
+.progress_bar_completed {
+    width: 0%;
+    height: 80%;
+    background: #1A1A1A;
     border-radius: 4px;
 }
 
@@ -317,6 +334,73 @@ input.searchbar::placeholder {
     align-items: flex-start;
     align-self: stretch;
 }
+
+.tick_btn {
+    border: none;
+    background: transparent;
+}
+
+.tick_btn:hover .circle circle {
+    stroke-dasharray: none;
+}
+
+.circle {
+    display: block;
+}
+
+.hover{
+    display: none;
+}
+
+
+
+.load {
+    animation: rotate 0.125s linear infinite;
+    display: none;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.ticked {
+    display: none;
+}
+
+
+/* STEP BUTTON CLICKED START */
+/* Loading animation */
+.loading .circle {
+    display: none;
+}
+
+.loading .load {
+    display: block;
+}
+
+.loading .ticked {
+    display: none;
+}
+
+/* Loading finishes */
+.clicked .circle {
+    display: none;
+}
+
+.clicked .load {
+    display: none;
+}
+
+.clicked .ticked {
+    display: block;
+}
+/* STEP BUTTON CLICKED END */
 
 .task_details {
     display: flex;
@@ -523,6 +607,7 @@ input.searchbar::placeholder {
     border-radius: 0.5rem;
     border: none;
     background: #FFF;
+    width: 100%;
 }
 
 .menu_1_sub_2:hover {
@@ -548,6 +633,10 @@ input.searchbar::placeholder {
     font-size: 0.8125rem;
     font-weight: 400;
     line-height: 140%;
+}
+
+.store {
+    width: 100%;
 }
 
 hr {
@@ -630,6 +719,9 @@ hr {
     border-radius: 0.5rem;
     background: none;
     border: none;
+}
+
+.menu_3 button a {
     color: #303030;
     font-family: 'Inter', sans-serif;
     font-size: 0.8125rem;
